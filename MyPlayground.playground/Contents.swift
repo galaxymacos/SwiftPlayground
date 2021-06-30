@@ -74,3 +74,16 @@ for i in 1...10{
     usedNumbers.append(i)
 }
 usedNumbers.count
+
+// Initializers
+struct User{
+    var username: String
+    init() {
+        username = "Anonymous"
+        print("Creating a new user")
+    }
+}
+
+var user = User()   // We need create a user like this
+user.username = "galaxymaxx"
+
