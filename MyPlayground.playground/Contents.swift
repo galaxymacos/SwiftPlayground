@@ -52,3 +52,10 @@ struct Bicycle{
     }
 }
 
+// Properties and methods of string
+let string = "Do or do not, there is no try."
+string.count
+string.hasPrefix("Do")
+string.uppercased()
+string.sorted()
+
