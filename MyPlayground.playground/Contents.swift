@@ -59,3 +59,18 @@ string.hasPrefix("Do")
 string.uppercased()
 string.sorted()
 
+// Properties and methods of array
+var toys = ["Woody"]
+print(toys.count)
+toys.append("Buzz")
+toys.firstIndex(of: "Buzz")
+toys.sorted()
+toys
+toys.remove(at: 0)
+toys
+
+var usedNumbers = [Int]()
+for i in 1...10{
+    usedNumbers.append(i)
+}
+usedNumbers.count
