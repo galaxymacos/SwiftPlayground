@@ -32,3 +32,23 @@ struct Progress{
 var progress = Progress(task: "Downloading", amount: 40)
 progress.amount = 50
 
+// Methods
+
+struct City{
+    var population: Int
+    func collectTaxes()->Int{
+        return population * 1000
+    }
+}
+
+let london = City(population: 9_000_000)
+london.collectTaxes()
+
+// Mutating Methods
+struct Bicycle{
+    var currentGear: Int
+    mutating func changeGear(to newGear: Int){
+        currentGear = newGear
+    }
+}
+
