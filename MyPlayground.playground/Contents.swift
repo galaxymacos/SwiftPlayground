@@ -87,3 +87,22 @@ struct User{
 var user = User()   // We need create a user like this
 user.username = "galaxymaxx"
 
+struct Starship{
+    var name: String
+    var maxWrap: Double
+    init(starshipName:String, max:Double) {
+        name = starshipName
+        maxWrap = max
+    }
+}
+
+let voyager = Starship(starshipName: "Voyager", max: 2.0)
+
+// Referring to the current instance
+struct Person{
+    var name:String
+    init(name:String){
+        print("\(name) was born!")
+        self.name = name
+    }
+}
