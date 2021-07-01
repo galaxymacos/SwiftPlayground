@@ -75,4 +75,31 @@ func myFavAlbum(album: String){
 }
 
 // Mission: Print Album release
+func printAlbumInfo(name: String, year: Int){
+    print("This album \(name) is released in \(year)")
+}
+printAlbumInfo(name: "Red", year: 2012)
+
+// Count letter in string
+//      1.
+//func countLetterInString(_ string:String){
+//    print("This string \(string) has \(string.count) letters")
+//}
+//      2.
+//func countLetterInString(_ string:String){
+//    print("This string \(string) has \(string.count) letters")
+//}
+
+func countLetter(in string:String){
+    print("This string \(string) has \(string.count) letters")
+}
+
+func isAlbumTaylorSwift(album: String)->Bool{
+    if album == "Red"{
+        return true
+    }
+    else{
+        return false
+    }
+}
 
