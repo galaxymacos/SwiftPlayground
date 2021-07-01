@@ -1,15 +1,17 @@
 import UIKit
 
-// static properties and methods
-struct Student{
-    static var classSize = 0
+// Inheritance
+class Dog{
     var name:String
-    init(name:String){
+    var breed:String
+    init(name: String, breed: String) {
         self.name = name
-        Student.classSize += 1
+        self.breed = breed
     }
 }
 
-var me = Student(name:"Xun")
-var steve = Student(name:"Steve Jobs")
-Student.classSize
+class Poodle: Dog{
+    init(name: String) {
+        super.init(name: name, breed: "Poodle")
+    }
+}
