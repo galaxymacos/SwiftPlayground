@@ -28,6 +28,18 @@ let num = Int(str)!
 //  this code will crash
 
 
-// Implicity unwrapped optionals
+// Implicitly unwrapped optionals
     // 我们可以像Int一样使用Int!，但是在nil情况下会crash
 let age: Int! = nil
+
+// Nil Coalescing
+func username(for id: Int)->String?{
+    if id == 1{
+        return "Taylor Swift"
+    }
+    else{
+        return nil
+    }
+}
+
+let user = username(for: 2) ?? "Anonymous"  // ?? 两边必须有空格
