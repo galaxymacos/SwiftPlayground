@@ -1,12 +1,24 @@
 import UIKit
 
 
-// Final Classes
-final class Dog{
-    var name:String
-    var breed:String
-    init(name:String, breed:String){
-        self.name = name
-        self.breed = breed
-    }
+// Copying objects
+
+//      Class use reference
+class Singer{
+    var name:String = "Taylor Swift"
 }
+
+var singer = Singer()
+var singer2 = singer
+singer.name = "Jusin bieber"
+singer2.name
+
+//      Struct use copy
+struct Shape{
+    var name:String = "Square"
+}
+var shape = Shape()
+var shape2 = shape
+shape.name = "Circle"
+shape2.name
+
