@@ -14,3 +14,4 @@ for animal in animalArr {
         curAnimal.Bark()
     }
 }
+
