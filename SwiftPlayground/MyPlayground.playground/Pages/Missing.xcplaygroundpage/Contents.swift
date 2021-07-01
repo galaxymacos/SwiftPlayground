@@ -43,3 +43,11 @@ func username(for id: Int)->String?{
 }
 
 let user = username(for: 2) ?? "Anonymous"  // ?? 两边必须有空格
+
+// Optional chaining
+var arr:[String] = ["a","b","c"]
+let answer = arr.first?.uppercased()
+// if first returns nil then Swift won't try to uppercase it
+
+let captain: [String]? = ["Archer", "Lorca", "Sisko"]
+let lengthOfBestCaptain = captain?.last?.count
