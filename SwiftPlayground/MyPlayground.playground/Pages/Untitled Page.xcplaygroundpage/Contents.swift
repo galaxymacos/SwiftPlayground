@@ -1,21 +1,25 @@
 import UIKit
 
-// Deinitializers
-class Person{
-    static var count = 0
-    var name = "John Doe"
-    var num: Int
-    init(){
-        Person.count+=1
-        num = Person.count
-        print("\(name) \(num) is alive")
-    }
-    
-    deinit {
-        print("\(name) \(num) is dead")
+// Mutability
+
+// class function can change variable by default
+class Singer{
+    var name = "Taylor Swift"
+    func changeName(){
+        name = "Ed Sheeran"
     }
 }
 
-for _ in 1...3{
-    var person = Person()
+var singer = Singer()
+singer.changeName()
+
+// struct function needs the "mutating" key word in order to change variable
+struct Shape{
+    var name = "Square"
+    mutating func changeName(){
+        name = "Square Changed"
+    }
 }
+
+var unknownShape = Shape()
+unknownShape.changeName()
