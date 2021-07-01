@@ -1,15 +1,17 @@
 import UIKit
 
-extension Int{
-    func isEven()->Bool{
-        return self % 2 == 0
-    }
-    
-    var iseven: Bool {
-        return self % 2 == 0
+let pythons = ["Eric", "Graham", "John", "Michael", "Terry"]
+let beatles = Set(["John", "Paul", "George", "Ringo"])
+
+extension Collection{
+
+    func summarize(){
+        print("There are \(count) of us:")
+        for name in self{
+            print(name)
+        }
     }
 }
 
-var myNum = 2
-myNum.iseven
-myNum.isEven()
+pythons.summarize()
+beatles.summarize()
