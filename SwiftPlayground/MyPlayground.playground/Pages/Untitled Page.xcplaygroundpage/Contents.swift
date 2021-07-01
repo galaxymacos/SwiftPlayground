@@ -1,24 +1,21 @@
 import UIKit
 
-
-// Copying objects
-
-//      Class use reference
-class Singer{
-    var name:String = "Taylor Swift"
+// Deinitializers
+class Person{
+    static var count = 0
+    var name = "John Doe"
+    var num: Int
+    init(){
+        Person.count+=1
+        num = Person.count
+        print("\(name) \(num) is alive")
+    }
+    
+    deinit {
+        print("\(name) \(num) is dead")
+    }
 }
 
-var singer = Singer()
-var singer2 = singer
-singer.name = "Jusin bieber"
-singer2.name
-
-//      Struct use copy
-struct Shape{
-    var name:String = "Square"
+for _ in 1...3{
+    var person = Person()
 }
-var shape = Shape()
-var shape2 = shape
-shape.name = "Circle"
-shape2.name
-
