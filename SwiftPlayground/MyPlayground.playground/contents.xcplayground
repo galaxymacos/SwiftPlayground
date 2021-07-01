@@ -4,5 +4,6 @@
         <page name='Missing'/>
         <page name='Untitled Page'/>
         <page name='Try Type'/>
+        <page name='Falliable Initializers'/>
     </pages>
 </playground>
