@@ -1,17 +1,15 @@
 import UIKit
 
-// Protocol inheritance
-protocol Payable{
-    func calculateWages()->Int
+extension Int{
+    func isEven()->Bool{
+        return self % 2 == 0
+    }
+    
+    var iseven: Bool {
+        return self % 2 == 0
+    }
 }
 
-protocol NeedsTraining{
-    func study()
-}
-
-protocol HasVacation{
-    func takeVacation(days: Int)
-}
-
-
-protocol Employee: Payable, NeedsTraining, HasVacation{}
+var myNum = 2
+myNum.iseven
+myNum.isEven()
