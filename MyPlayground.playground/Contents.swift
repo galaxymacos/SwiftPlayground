@@ -1,21 +1,15 @@
 import UIKit
 
-// Lazy properties
-struct FamilyTree{
-    init(){
-        print("Creating family tree!")
-    }
-}
-
-struct Person{
+// static properties and methods
+struct Student{
+    static var classSize = 0
     var name:String
-    lazy var familyTree = FamilyTree()
-    init(name:String) {
+    init(name:String){
         self.name = name
+        Student.classSize += 1
     }
 }
 
-// The familyTree won't be created because of the lazy keyword
-var me = Person(name: "Xun Ruan")
-var myFriend = Person(name: "Steve Jobs")
-me.familyTree
+var me = Student(name:"Xun")
+var steve = Student(name:"Steve Jobs")
+Student.classSize
