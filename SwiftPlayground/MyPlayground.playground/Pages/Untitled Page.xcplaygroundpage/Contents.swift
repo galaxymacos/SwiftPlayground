@@ -1,18 +1,17 @@
 import UIKit
 
-// Protocols
-
-protocol Identifiable{
-    var id:String{get set}
+// Protocol inheritance
+protocol Payable{
+    func calculateWages()->Int
 }
 
-struct User: Identifiable{
-    var id:String
+protocol NeedsTraining{
+    func study()
 }
 
-func displayID(thing: Identifiable){
-    print("My ID is \(thing.id)")
+protocol HasVacation{
+    func takeVacation(days: Int)
 }
 
-var user = User(id: "example ID")
-displayID(thing: user)
+
+protocol Employee: Payable, NeedsTraining, HasVacation{}
