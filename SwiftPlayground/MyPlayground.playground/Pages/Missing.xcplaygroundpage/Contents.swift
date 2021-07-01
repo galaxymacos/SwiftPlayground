@@ -26,3 +26,8 @@ let num = Int(str)!
 //  let str = "crash"
 //  let num2 = Int(str)!
 //  this code will crash
+
+
+// Implicity unwrapped optionals
+    // 我们可以像Int一样使用Int!，但是在nil情况下会crash
+let age: Int! = nil
