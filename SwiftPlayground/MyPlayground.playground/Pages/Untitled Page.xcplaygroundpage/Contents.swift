@@ -1,17 +1,20 @@
 import UIKit
 
-let pythons = ["Eric", "Graham", "John", "Michael", "Terry"]
-let beatles = Set(["John", "Paul", "George", "Ringo"])
+// Protocol-oriented programming
+protocol Identifiable{
+    var id:String{get set}
+    func identify()
+}
 
-extension Collection{
-
-    func summarize(){
-        print("There are \(count) of us:")
-        for name in self{
-            print(name)
-        }
+extension Identifiable{
+    func identify(){
+        print("My ID is \(id)")
     }
 }
 
-pythons.summarize()
-beatles.summarize()
+struct User: Identifiable{
+    var id:String
+}
+
+let twoStraws = User(id: "twoStraws")
+twoStraws.identify()
