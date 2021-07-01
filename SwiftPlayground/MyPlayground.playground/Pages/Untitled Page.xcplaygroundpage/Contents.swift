@@ -1,25 +1,18 @@
 import UIKit
 
-// Mutability
+// Protocols
 
-// class function can change variable by default
-class Singer{
-    var name = "Taylor Swift"
-    func changeName(){
-        name = "Ed Sheeran"
-    }
+protocol Identifiable{
+    var id:String{get set}
 }
 
-var singer = Singer()
-singer.changeName()
-
-// struct function needs the "mutating" key word in order to change variable
-struct Shape{
-    var name = "Square"
-    mutating func changeName(){
-        name = "Square Changed"
-    }
+struct User: Identifiable{
+    var id:String
 }
 
-var unknownShape = Shape()
-unknownShape.changeName()
+func displayID(thing: Identifiable){
+    print("My ID is \(thing.id)")
+}
+
+var user = User(id: "example ID")
+displayID(thing: user)
