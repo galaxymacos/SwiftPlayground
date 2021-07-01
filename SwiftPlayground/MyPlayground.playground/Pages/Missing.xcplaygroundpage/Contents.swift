@@ -17,3 +17,12 @@ func greet(_ name: String?){
     }
     print("Hello, \(unwrapped)")
 }
+
+// Force unwrapping
+let str = "5"
+let num = Int(str)!
+
+
+//  let str = "crash"
+//  let num2 = Int(str)!
+//  this code will crash
