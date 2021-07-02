@@ -103,3 +103,44 @@ func isAlbumTaylorSwift(album: String)->Bool{
     }
 }
 
+// Optional
+func getHaterStatus()->String{
+    return "Hate"
+}
+
+func getHaterStatus(weather: String)->String?{
+    if weather == "Sunny"{
+        return nil
+    }
+    else{
+        return "Hate"
+    }
+}
+
+
+var status:String?
+status = getHaterStatus(weather: "Sunny")
+type(of: status)
+
+func takeHaterAction(status: String)->String?{
+    if(status == "Hate"){
+        return "Hating"
+    }
+    return nil
+}
+
+if let status = getHaterStatus(weather: "Sunny"){
+    takeHaterAction(status: status)
+}
+
+// Force unwrapping
+func getAlbumYear(album: String)->Int?{
+    switch album {
+    case "Red":
+        return 2012
+    default:
+        return nil
+    }
+}
+
+"Album Red is released in \(getAlbumYear(album: "Red")!)"
