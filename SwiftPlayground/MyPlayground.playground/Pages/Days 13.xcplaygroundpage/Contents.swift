@@ -144,3 +144,22 @@ func getAlbumYear(album: String)->Int?{
 }
 
 "Album Red is released in \(getAlbumYear(album: "Red")!)"
+
+// Optional Chaining
+func albumReleased(year: Int) -> String? {
+    switch year {
+    case 2006: return "Taylor Swift"
+    case 2008: return "Fearless"
+    case 2010: return "Speak Now"
+    case 2012: return "Red"
+    case 2014: return "1989"
+    default: return nil
+    }
+}
+
+// Mission: What if I want to uppercase the result
+albumReleased(year: 2006)?.uppercased()
+albumReleased(year: 2007)?.uppercased()
+
+// Mission: Nil coalescing
+var searchResult = albumReleased(year: 2007) ?? "Unknown"
