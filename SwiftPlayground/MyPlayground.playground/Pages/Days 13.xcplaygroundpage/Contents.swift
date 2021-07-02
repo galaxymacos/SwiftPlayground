@@ -1,3 +1,5 @@
+import Foundation
+
 let name = "Yongchen Liu"
 //name = "Xun Ruan"
 
@@ -163,3 +165,54 @@ albumReleased(year: 2007)?.uppercased()
 
 // Mission: Nil coalescing
 var searchResult = albumReleased(year: 2007) ?? "Unknown"
+
+// Class
+class Singer{
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    func sing(){
+        print("La La")
+    }
+}
+
+var taylor = Singer(name: "Taylor", age: 30)
+taylor.name
+taylor.age
+taylor.sing()
+
+class CountrySinger: Singer{
+    override func sing() {
+        print("Country Liquor")
+    }
+}
+taylor = CountrySinger(name: "Country Taylor", age:30)
+taylor.sing()
+
+// Create a heavy metal singer
+class HeavyMetalSinger: Singer{
+    var noiseLevel:Int
+    init(name: String, age: Int, noiseLevel: Int) {
+        self.noiseLevel = noiseLevel
+        super.init(name: name, age: age)    // Done through a method call, which cannot be done
+    }
+    
+    override func sing(){
+        print("grgrgr")
+    }
+}
+
+// Objective-C
+
+// Mark the class to be callable by System OS
+@objcMembers class SystemRequest{
+    // Mark the function to be callable by System OS
+    @objc func wakeMeUp(){
+        print("Walk me up in 10 minutes")
+    }
+}
