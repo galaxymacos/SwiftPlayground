@@ -45,3 +45,21 @@ struct ManWithAge{
         return age*7
     }
 }
+
+// Static properties and methods
+struct TaylorFan{
+    var name: String
+    var age: Int
+    static var favoriteSong: String = "Look what you make me do"
+}
+
+TaylorFan.favoriteSong
+
+// access control
+
+struct Test{
+    private var password: String
+    fileprivate var onlyInThisFile: String
+    internal var onlyForYourself: String
+    public var forEveryone: String
+}
